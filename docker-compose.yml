@@ -7,8 +7,9 @@ services:
         image: ${CURRENT_NGINX_IMG}
         ports:
             - 1935:1935
+            - 8000:80
         networks:
             - bx-net
 networks:
     bx-net:
-        driver: hosts
+        driver: bridge

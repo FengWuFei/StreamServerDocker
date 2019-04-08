@@ -56,6 +56,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
 
 # Set up config file
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY stat.xsl /etc/nginx/stat.xsl
 
 EXPOSE 1935
 
