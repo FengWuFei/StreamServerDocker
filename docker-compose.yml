@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+    nginx:
+        build:
+            context: ./nginx
+        image: ${CURRENT_NGINX_IMG}
+        ports:
+            - 1935:1935
+        networks:
+            - bx-net
+networks:
+    bx-net:
+        driver: hosts
