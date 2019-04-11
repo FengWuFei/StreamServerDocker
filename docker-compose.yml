@@ -1,15 +1,30 @@
 version: "3.7"
 
 services:
-    nginx:
+    main:
         build:
-            context: ./nginx
-        image: ${CURRENT_NGINX_IMG}
+            context: ./main
+        image: main
         ports:
-            - 1935:1935
-            - 8000:80
+            - 19350:19350
         networks:
             - bx-net
+    backup:
+        build:
+            context: ./backup
+        image: backup
+        ports:
+            - 19351:19351
+        networks:
+            - bx-net
+    edge1:
+        build:
+            context: ./edge1
+        image: edge1
+        ports:
+            - 1935:1935
+        networks:
+            - bx-net     
 networks:
     bx-net:
         driver: bridge
