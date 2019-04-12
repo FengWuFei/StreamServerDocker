@@ -25,11 +25,13 @@ services:
     #         - 1935:1935
     #     networks:
     #         - bx-net
-    vapror:
+    vapor:
         build:
-            context: ./vapror
-        image: vapror
-        network_mode: host   
+            context: ./vapor
+        image: vapor
+        network_mode: host
+        tty: true
+        entrypoint: bash
 # networks:
 #     bx-net:
 #         driver: bridge
