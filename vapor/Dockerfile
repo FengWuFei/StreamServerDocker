@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 LABEL maintainer="Mars"
 LABEL description="Docker container for Swift Vapor development"

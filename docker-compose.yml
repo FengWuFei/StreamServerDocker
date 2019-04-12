@@ -32,6 +32,11 @@ services:
         network_mode: host
         tty: true
         entrypoint: bash
+    vapor1:
+        image: vapor
+        network_mode: host
+        tty: true
+        entrypoint: bash
 # networks:
 #     bx-net:
 #         driver: bridge
