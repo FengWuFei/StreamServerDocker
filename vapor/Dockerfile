@@ -41,5 +41,4 @@ RUN apt-get install swift vapor -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN cd /home/ly3/ && \
-    git clone https://github.com/FengWuFei/StreamPusher.git
+RUN apt-get install ffmpeg -y
